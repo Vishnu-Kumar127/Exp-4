@@ -14,13 +14,13 @@ public class arr {
         int ch;
         do
         {
-            System.out.println("\n\n1.Push \n2.Pop \n3.Display \n4.Exit");
+            System.out.println("\n1.Push \n2.Pop \n3.Display \n4.Exit");
             System.out.print("Enter your choice:");
             ch=obj.nextInt();
             switch(ch)
             {
             case 1:
-                System.out.println("Enter the element");
+                System.out.print("Enter the element:");
                 int ele =obj.nextInt();
                 stk.push(ele);
                 break;
@@ -93,15 +93,22 @@ class Stack_array implements Mystack
     {
         if(top<0)
         {
-            System.out.println("Stack is empty");
+            System.out.println("\nStack is empty");
         }
         else
         {
             int i;
-            System.out.print("Elements are: ");
-            for( i=0; i<top; i++)
-               System.out.print(stack[i]+" <--");  
-            System.out.print(stack[i]); 
+            System.out.println("\nElements are ");
+            System.out.println("|       |");
+            System.out.println("|   "+stack[top]+"   |<--Top");
+            System.out.println("|_______|");
+            for( i=top-1; i>=0; i--){
+                System.out.println("|       |");
+                System.out.println("|   "+stack[i]+"   |");
+                System.out.println("|_______|");
+            }
+                 
+             
         }
     }
 }

@@ -11,7 +11,7 @@ public class Tax {
         double w;
         Scanner obj=new Scanner(System.in);
         System.out.print("Enter Name:");
-        z=obj.next();
+        z=obj.nextLine();
         System.out.print("Enter Gender(Male or Female):");
         y=obj.next();
         System.out.print("Enter Aadhar Number:");
@@ -32,19 +32,18 @@ abstract class person
     abstract String getinfo();
     double caltax(double a)
     {
-        System.out.println(a);
+        
         double income=a;
-        if("Male".equals(gender))
+        if("Male".equalsIgnoreCase(gender))
         {
-            System.out.println(a);
+         
             if(190000>=income)
             {
-                System.out.println(a);
+                
                 taxs=0;
             }
             else if (200000>=income)
             {
-                System.out.println(a);
                taxs=income*.10;
             }
             else if (500000>=income)
@@ -75,7 +74,6 @@ abstract class person
                  taxs=income*.2;
             } 
         }
-        System.out.println(taxs);
         return taxs;
     }
 }
